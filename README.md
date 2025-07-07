@@ -73,7 +73,7 @@ docker rm hello-app
 docker rmi hello-docker
 
 
-Built by [Jane Obikwelu] to learn Docker the fun way 🎉
+Built by Jane Obikwelu to learn Docker the fun way 🎉
 
 
 
