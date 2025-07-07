@@ -1,0 +1,21 @@
+# Ignore Python virtual environment
+venv/
+
+# Byte-compiled files
+__pycache__/
+*.pyc
+
+# macOS system files
+.DS_Store
+
+# Docker-related
+*.log
+*.pid
+.env
+
+# VS Code and other editors
+.vscode/
+
+# Optional: Ignore build or cache folders
+build/
+dist/
