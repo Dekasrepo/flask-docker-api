@@ -1,8 +1,17 @@
-# 🐳 Hello Docker – Flask API Project
+## 🐳 Hello Docker – Flask API Project
 
 This is a simple Python Flask API containerized using Docker. It was built to practice Docker fundamentals like building images, running containers, port mapping, and deploying to Docker Hub.
 
-## 🚀 Features
+---
+
+### 📖  Table Of Content
+- Features
+- Folder Structure
+- Projetc Execution
+- Cleanup
+
+---
+### 🚀 Features
 
 - Two endpoints:
   - `/` returns a hello message
@@ -12,33 +21,42 @@ This is a simple Python Flask API containerized using Docker. It was built to pr
 
 ---
 
-## 🧱 Folder Structure
+### 🧱 Folder Structure
 
+```
 hello-docker/
 ├── app.py
 ├── Dockerfile
 ├── .dockerignore
 ├── requirements.txt
 └── README.md
-
+```
 
 ---
+### 💼 Project Execution
 
-## 🐍 Step 1: Set Up (Virtual Environment Optional)
+**🐍 Step 1: Set Up (Virtual Environment Optional)**
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install flask
 pip freeze > requirements.txt
+```
 
 
-## Step 2: Build Docker Image
+**🛠️ Step 2: Build Docker Image**
+
+```
 docker build -t hello-docker .
+```
 
 
-##▶️ Step 3: Run the Container
+**▶️ Step 3: Run the Container**
+
+```
 docker run -d -p 5000:5000 --name hello-app hello-docker
+```
 
 Visit: http://localhost:5000
 
@@ -48,32 +66,48 @@ Visit: http://localhost:5000
 /about → project description JSON
 
 
-## 🐳 Step 4: Push to Docker Hub
-# Tag the image using your own dockerhub name
+
+**🐳 Step 4: Push to Docker Hub**
+
+- Tag the image using your own dockerhub name
+```
 docker tag hello-docker njidekadocker/hello-docker:v1
+```
 
-# Login to Docker Hub
+- Login to Docker Hub
+```
 docker login
+```
 
-# Push the image
+- Push the image
+```
 docker push njidekadocker/hello-docker:v1 
+```
 
 
-## 📂 Step 5: Push to GitHub
+
+**📂 Step 5: Push to GitHub**
+
+```
 git init
 git add .
 git commit -m "Initial Docker Flask API project"
 git remote add origin https://github.com/your-username/hello-docker.git
 git push -u origin main
+```
 
 
-## 🧼 Clean Up
+
+### 🧼 Clean Up
+
+```
 docker stop hello-app
 docker rm hello-app
 docker rmi hello-docker
+```
 
 
-Built by Jane Obikwelu to learn Docker the fun way 🎉
+#### Built by Jane Obikwelu to learn Docker the fun way 🎉
 
 
 
